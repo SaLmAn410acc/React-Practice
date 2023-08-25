@@ -33,12 +33,13 @@ const FetchData = () => {
       <h3>github users</h3>
       <ul className="users">
         {people.map((user) => {
+          const { id, avatar_url, login } = user;
           // console.log(user);
           return (
-            <li>
-              <img src={user.avatar_url} />
+            <li key={id}>
+              <img src={avatar_url} />
               <div>
-                <h5>{user.login}</h5>
+                <h5>{login}</h5>
                 <a href="">profile</a>
               </div>
             </li>
