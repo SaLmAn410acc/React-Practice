@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+
+body {
+  font-style: "Inter", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* navbar css start*/
+.nav-bg {
+  background-color: #3b5d50;
+}
+
+.navbar-brand {
+  color: #fff;
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.navbar-brand:hover {
+  color: #fff;
+}
+
+.nav-item {
+  padding-left: 20px;
+}
+
+.nav-item a {
+  color: #a7b6b0;
+  font-weight: 500;
+  display: inline-block;
+}
+
+.nav-item a:hover {
+  color: #fff;
+}
+
+.nav-item a::after {
+  content: "";
+  width: 0px;
+  height: 4px;
+  display: block;
+  background: #f9bf29;
+  color: #ffffff;
+  transition: 300ms;
+}
+
+.nav-item a:hover::after {
+  width: 100%;
+}
+
+.nav-last-items li {
+  margin-left: 28px;
+}
+
+.nav-last-items {
+  display: flex;
+  margin-left: 36px;
+}
+/* .nav-item a::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 4px; 
+  background-color: #f9bf29;
+  transition: width 0.3s ease;
+} */
+
+/* .nav-item.active a {
+  border-bottom: 4px solid #f9bf29;
+} */
+
+/* navbar css stop*/
