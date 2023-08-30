@@ -2,6 +2,13 @@
 
 body {
   font-style: "Inter", sans-serif;
+  overflow-x: hidden;
+  position: relative;
+}
+
+a {
+  text-decoration: none !important;
+  cursor: pointer;
 }
 
 * {
@@ -9,11 +16,18 @@ body {
   padding: 0;
 }
 
+.container {
+  max-width: 1320px;
+}
+
 /* navbar css start*/
 .nav-bg {
   background-color: #3b5d50;
 }
 
+.navbar-brand span {
+  opacity: 0.4;
+}
 .navbar-brand {
   color: #fff;
   font-size: 32px;
@@ -29,13 +43,13 @@ body {
 }
 
 .nav-item a {
-  color: #a7b6b0;
+  color: #a7b6b0 !important;
   font-weight: 500;
   display: inline-block;
 }
 
 .nav-item a:hover {
-  color: #fff;
+  color: #fff !important;
 }
 
 .nav-item a::after {
@@ -60,6 +74,11 @@ body {
   display: flex;
   margin-left: 36px;
 }
+
+button[type="button"] {
+  border: none;
+  outline: none;
+}
 /* .nav-item a::before {
   content: "";
   position: absolute;
@@ -76,3 +95,175 @@ body {
 } */
 
 /* navbar css stop*/
+
+/* hero section start css */
+.hero-sec {
+  background-color: #3b5d50;
+  padding-top: 75px;
+}
+
+.left-sec-hero h1 {
+  color: #fff;
+  font-size: 54px;
+  font-weight: 700;
+  margin-top: 38px;
+}
+
+.left-sec-hero p {
+  color: #a7b6b0;
+  margin: 30px 0px;
+  max-width: 100%;
+  line-height: 28px;
+
+  width: 452px;
+  font-weight: 400;
+  font-size: 15px;
+}
+
+.left-sec-hero > div a:first-of-type {
+  color: #000;
+  font-weight: 600;
+  text-decoration: none;
+  background-color: #f9bf29;
+  padding: 12px 30px;
+  border-radius: 30px;
+  font-size: 17px;
+  border: 2px solid #f9bf29;
+}
+.left-sec-hero > div a:first-of-type:hover {
+  background-color: #fff;
+  border: 2px solid #f9bf29;
+  transition: 0.2s ease;
+}
+
+.left-sec-hero > div a:last-of-type {
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  background-color: #3b5d50;
+  padding: 12px 30px;
+  border-radius: 30px;
+  font-size: 17px;
+  border: 2px solid #a7b6b0;
+  margin-left: 12px;
+}
+
+.left-sec-hero > div a:last-of-type:hover {
+  border: 2px solid #fff;
+  transition: 0.2s ease;
+}
+
+.right-sec-hero img:first-of-type {
+  /* position: absolute; */
+  width: 777px;
+  max-width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.right-sec-hero::after {
+  content: "";
+  background-image: url(./src/images/dots-light.svg);
+  width: 200px;
+  height: 200px;
+  position: absolute;
+
+  top: 30px;
+  right: 9px;
+}
+
+/* .right-sec-hero img:last-of-type {
+  position: absolute;
+  max-width: 100%;
+  right: -80px;
+  top: 30px;
+} */
+
+/* hero section stop css */
+
+/* explore section start css */
+
+.exp-prod-btn {
+  position: relative;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #000;
+  padding-bottom: 55px;
+}
+
+.exp-prod-btn:hover {
+  color: #000;
+}
+
+.exp-prod-btn:hover .exp-prod-btn > img {
+  top: -20px;
+}
+
+.exp-prod-btn h3 {
+  font-weight: 600;
+  font-size: 17px;
+}
+
+.exp-prod-btn > img {
+  max-width: 100%;
+  top: 0;
+}
+.cross-sign {
+  position: absolute;
+  bottom: -5px;
+}
+
+.cross-sign > img {
+  background-color: #2f2f2f;
+  padding: 8px;
+  border-radius: 50%;
+  margin-top: 38px;
+  opacity: 0;
+  transition: 0.3s all ease;
+  z-index: -1;
+}
+
+.exp-prod-btn:hover .cross-sign > img {
+  z-index: 2;
+  opacity: 1;
+}
+
+.exp-prod-btn::after {
+  position: absolute;
+  content: "";
+  /* left: 0; */
+  bottom: 11px;
+  right: 0;
+  left: 0;
+  z-index: -1;
+  background: #dce5e4;
+  height: 0;
+  transition: 0.3s all ease;
+  opacity: 0.3;
+}
+
+.exp-prod-btn:hover::after {
+  height: 70%;
+  z-index: 1;
+}
+/* explore section stop css */
+
+/* responsive css start */
+
+@media screen and (max-width: 991px) {
+  .nav-item {
+    padding-left: 0;
+  }
+
+  .nav-last-items {
+    margin-left: 0px;
+  }
+
+  .nav-last-items li {
+    margin-left: 0px;
+    margin-right: 25px;
+  }
+}

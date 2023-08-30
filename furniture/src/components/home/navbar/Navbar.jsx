@@ -1,12 +1,15 @@
 import user from "../../../images/user.svg";
 import cart from "../../../images/cart.svg";
 
+import { linksData } from "../../../../data";
+
 const Navbar = () => {
   return (
-    <nav className="navbar navbar-expand-lg nav-bg">
+    <nav className="navbar navbar-expand-lg navbar-dark nav-bg">
       <div className="container">
         <a className="navbar-brand" href="#">
-          Furni.
+          Furni
+          <span>.</span>
         </a>
         <button
           className="navbar-toggler"
@@ -18,7 +21,7 @@ const Navbar = () => {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span className="navbar-toggler-icon"></span>
+          <span className="navbar-toggler-icon my-toggler"></span>
         </button>
 
         <NavbarLinks />
@@ -32,39 +35,18 @@ const NavbarLinks = () => {
     <>
       <div className="collapse navbar-collapse" id="navbarNavDropdown">
         <ul className="navbar-nav  ml-auto">
-          <li className="nav-item active">
-            <a className="nav-link" href="#">
-              Home <span className="sr-only ">(current)</span>
-            </a>
-          </li>
-          <li className="nav-item different">
-            <a className="nav-link" href="#">
-              Shop
-            </a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="#">
-              About Us
-            </a>
-          </li>
-
-          <li className="nav-item">
-            <a className="nav-link" href="#">
-              Services
-            </a>
-          </li>
-
-          <li className="nav-item">
-            <a className="nav-link" href="#">
-              Blog
-            </a>
-          </li>
-
-          <li className="nav-item">
-            <a className="nav-link" href="#">
-              About Us
-            </a>
-          </li>
+          {linksData.map((link, index) => {
+            return (
+              <li className="nav-item active" key={index}>
+                <a className="nav-link" href="#">
+                  {link.name}{" "}
+                  {index == 0 ? (
+                    <span className="sr-only ">(current)</span>
+                  ) : null}
+                </a>
+              </li>
+            );
+          })}
 
           <div className="nav-last-items">
             <li>
