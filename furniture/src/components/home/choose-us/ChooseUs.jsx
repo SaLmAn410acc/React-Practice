@@ -24,7 +24,7 @@ const ChooseUs = () => {
               <DeliveryFeature name="Hassle Free Returns" img={returnImg} />
             </div>
           </div>
-          <div className="col-md-5 choose-us-img">
+          <div className="col-md-5 col-lg-5 choose-us-img">
             <img src={chooseUs} alt="" className="img-fluid " />
           </div>
         </div>

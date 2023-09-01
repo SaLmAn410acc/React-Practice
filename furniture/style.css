@@ -4,6 +4,7 @@ body {
   font-style: "Inter", sans-serif;
   overflow-x: hidden;
   position: relative;
+  box-sizing: border-box;
 }
 
 a {
@@ -294,7 +295,7 @@ button[type="button"] {
 
 .choose-us {
   background-color: #eff2f1;
-  padding: 180px 0px;
+  padding: 130px 0px;
 }
 
 .choose-us-heading > h2 {
@@ -348,6 +349,8 @@ button[type="button"] {
   justify-content: end;
   align-items: center;
   position: relative;
+  height: 36rem;
+  border: 1px solid red;
 }
 
 .choose-us-img > img {
@@ -362,8 +365,8 @@ button[type="button"] {
   background-image: url(./src/images/dots-yellow.svg);
   background-repeat: no-repeat;
   background-size: cover;
-  top: -160px;
-  left: -70px;
+  top: -100px;
+  left: -60px;
   width: 250px;
   height: 250px;
 }
