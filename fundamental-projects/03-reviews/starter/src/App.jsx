@@ -1,4 +1,6 @@
+import Review from "./Review";
+
 const App = () => {
-  return <h2>Reviews Starter</h2>;
+  return <Review />;
 };
 export default App;
